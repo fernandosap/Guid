@@ -13,11 +13,13 @@
     "crypto": "^1.0.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.15.6",
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "https": "^1.0.0",
     "mongoose": "^5.4.2",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
   }
 }

@@ -15,7 +15,7 @@ var User = require("./models/user")
 
 var app = express();
 var httpApp = express();
-var mongoDB = 'mongodb://127.0.0.1/diborecast';
+var mongoDB = 'mongodb://127.0.0.1/guid';
 
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
@@ -41,6 +41,10 @@ passport.deserializeUser(User.deserializeUser());
 
 var port = 8080;
 
+app.get('/',function(req,res){
+	res.render('home');
+});
+
 app.get('/login',function(req,res){
 	res.render('login');
 });
@@ -53,10 +57,6 @@ app.get('/error',function(req,res){
 	res.render('error');
 });
 
-app.get('/home',isLoggedIn,function(req,res){
-	res.render('home');
-});
-
 app.post("/register", function(req,res){
 	var newuser = new User({username: req.body.username, nombre: req.body.nombre, apellido: req.body.apellido});
 	User.register(newuser, req.body.password, function(err,user){
@@ -65,14 +65,14 @@ app.post("/register", function(req,res){
 			return res.render("register");
 		} 
 		passport.authenticate("local")(req,res,function(){
-			res.redirect("/home");
+			res.redirect("/");
 		});
 	});
 });
 
 app.post("/login", passport.authenticate("local",
 	{
-		successRedirect:"/dashboard",
+		successRedirect:"/",
 		failureRedirect:"/error"
 	}), function(req,res){
 });
