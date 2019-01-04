@@ -8,3 +8,9 @@
     font-size: 3.5rem;
   }
 }
+
+
+.btn-warning {
+	background: rgba(255,230,0,0.3) !important;
+	border-color: rgba(255,230,0,1) !important;
+}

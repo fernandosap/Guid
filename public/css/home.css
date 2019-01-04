@@ -15,3 +15,8 @@ html, body {
 .navbar-toggler-icon{
 	border-color: red !important;
 }
+
+.nav-link{
+	color: black !important;
+	font-weight: 600 !important
+}

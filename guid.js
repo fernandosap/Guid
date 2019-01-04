@@ -57,6 +57,14 @@ app.get('/error',function(req,res){
 	res.render('error');
 });
 
+app.get('/AboutUs', function(req,res){
+	res.render('AboutUs');
+});
+
+app.get('/ContactUs', function(req,res){
+	res.render('ContactUs')
+})
+
 app.post("/register", function(req,res){
 	var newuser = new User({username: req.body.username, nombre: req.body.nombre, apellido: req.body.apellido});
 	User.register(newuser, req.body.password, function(err,user){
