@@ -1,0 +1,23 @@
+{
+  "name": "guid",
+  "version": "1.0.0",
+  "description": "Guid productivo",
+  "main": "guid.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Sánchez Lara",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "mongoose": "^5.4.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
