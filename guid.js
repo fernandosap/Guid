@@ -39,7 +39,12 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-var port = 8080;
+var port = 8080
+
+app.use(function(req,res,next){
+	res.locals.loggedUser = req.user;
+	next();
+});
 
 app.get('/',function(req,res){
 	res.render('home');

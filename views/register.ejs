@@ -6,21 +6,56 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Signin Dibo-Recast</title>
+    <title>Signin Güid</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="/images/guid3.png">
 
-    <link rel="stylesheet" type="text/css" href="/css/login.css">
     <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/css/signin.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-    <link href="http://getbootstrap.com/docs/4.2/examples/sign-in/signin.css" rel="stylesheet">
 </head>
 <body class="text-center">
+
+        <!-- NAVBAR -->
+    <div>
+         <nav class="navbar navbar-expand-md border-bottom-0 border-secondary rounded-bottom">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+          <ul class="navbar-nav mr-auto">
+              <% if(loggedUser){%>
+                <li class="nav-item">
+                    <b><a class="nav-link" href="/MyAccount">My Account</a></b>
+                </li>
+              <% } else { %>
+                <li class="active">
+                    <b><a class="nav-link" href="/">Home</a></b>
+                </li>
+              <% } %>
+              <li class="nav-item">
+                  <b><a class="nav-link" href="/AboutUs">About Us</a></b>
+              </li>
+              <li class="nav-item">
+                  <b><a class="nav-link" href="/ContactUs">Contact Us</a></b>
+              </li>
+          </ul>
+      </div>
+      <div class="mx-auto order-0">
+          <a class="navbar-brand mx-auto" href="/"><img src="/images/guid_blanco.png" height="80" width="80"></a>
+          <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </div>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      </div>
+  </nav>
+    </div>
+
+    <!-- Fin de Navbar -->
+
 	<form action="/register" method="POST" class="form-signin">
         <a class="navbar-brand mx-auto" href="/"><img src="/images/guid3.png" height="120" width="120"></a>
         <h1 class="h3 mb-3 font-weight-normal"> Unete a la red de weed más grande</h1>
@@ -41,4 +76,8 @@
 
     </form>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </html>
+

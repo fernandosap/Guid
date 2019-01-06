@@ -17,9 +17,15 @@
     <nav class="navbar navbar-expand-md border-bottom-0 border-secondary rounded-bottom">
       <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
           <ul class="navbar-nav mr-auto">
-              <li class="active">
-                  <b><a class="nav-link" href="/">Home</a></b>
-              </li>
+              <% if(loggedUser){%>
+                <li class="nav-item">
+                    <b><a class="nav-link" href="/MyAccount">My Account</a></b>
+                </li>
+              <% } else { %>
+                <li class="active">
+                    <b><a class="nav-link" href="/">Home</a></b>
+                </li>
+              <% } %>
               <li class="nav-item">
                   <b><a class="nav-link" href="/AboutUs">About Us</a></b>
               </li>
@@ -29,7 +35,7 @@
           </ul>
       </div>
       <div class="mx-auto order-0">
-          <a class="navbar-brand mx-auto" href="/bienvenido"><img src="/images/guid3.png" height="80" width="80"></a>
+          <a class="navbar-brand mx-auto" href="/"><img src="/images/guid3.png" height="80" width="80"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -37,7 +43,11 @@
       <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
           <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                  <b><a class="nav-link" href="/login">Sign/Log In</a></b>
+                <% if(loggedUser){ %>
+                  <b><a class="nav-link" href="/logout">Log Out!</a></b>
+                <% } else { %>
+                  <b><a class="nav-link" href="/login">Sign/Log In!</a></b>
+                <% } %>
               </li>
           </ul>
       </div>
